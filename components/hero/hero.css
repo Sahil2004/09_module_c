@@ -1,0 +1,209 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url(/Urban-Forestry.jpeg) center / cover no-repeat;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(10, 28, 18, 0.88) 40%,
+    rgba(10, 28, 18, 0.45) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 140px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(126, 200, 88, 0.15);
+  border: 1px solid rgba(126, 200, 88, 0.4);
+  color: var(--lime);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-badge {
+  animation-delay: 0.1s;
+}
+
+.hero-badge::before {
+    content: '●';
+    font-size: 8px;
+}
+
+.hero-left > * {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.hero-title {
+    animation-delay: 0.25s;
+}
+
+.hero-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(52px, 6vw, 82px);
+    line-height: 1.0;
+    color: var(--white);
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.hero-title .accent {
+    color: var(--lime);
+}
+
+.hero-desc {
+    animation-delay: 0.4s;
+}
+
+.hero-desc {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 36px;
+}
+
+.hero-buttons {
+    animation-delay: 0.55s;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--forest);
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 10px 10px #e9a84c75;
+}
+
+.btn-outline {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-outline:hover {
+    border-color: var(--lime);
+    background-color: var(--forest-light);
+}
+
+.hero-stats {
+    animation-delay: 0.35s;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.35s forwards;
+}
+
+.hero-stats {
+    background: rgba(26, 58, 42, 0.75);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(126, 200, 88, 0.2);
+    border-radius: 20px;
+    padding: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.stat-number {
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.stat-number .plus {
+    color: var(--lime);
+    font-size: 28px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 120px 24px 60px;
+  }
+}
+
+@media (max-width: 900px) {
+    .hero-stats {
+        display: none;
+    }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

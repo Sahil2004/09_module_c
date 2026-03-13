@@ -1,0 +1,94 @@
+@media (max-width: 900px) {
+    .pillars-section, .impact-section, .cta-section {
+        padding: 60px 24px;
+    }
+}
+
+.impact-section {
+    background: var(--forest);
+    padding: 80px 48px;
+}
+
+.section-label {
+    text-align: center;
+    color: var(--lime);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 900;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 60px;
+}
+
+@media (max-width: 900px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.impact-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(126, 200, 88, 0.15);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+    cursor: default;
+}
+
+.impact-card:hover {
+    transform: translateY(-5%);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.impact-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.impact-number {
+    font-family: 'Fraunces', serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--white);
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+}
+
+.impact-number .suf {
+    color: var(--lime);
+    font-size: 32px;
+}
+
+.impact-name {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 10px 0 4px;
+}
+
+.impact-sub {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+    line-height: 1.5;
+}

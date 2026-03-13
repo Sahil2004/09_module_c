@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --forest: #1a3a2a;
+  --forest-mid: #234d38;
+  --forest-light: #2e6645;
+  --lime: #7ec858;
+  --gold: #e9a84c;
+  --cream: #f5f0e8;
+  --white: #ffffff;
+  --text-dark: #111a14;
+  --text-muted: #6b7c6e;
 }
 
 @theme inline {
@@ -23,4 +32,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
