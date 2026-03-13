@@ -1,16 +1,22 @@
+"use client";
+
 import CtaSection from "@/components/ctaSection/ctaSection";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import Impact from "@/components/impact/impact";
+import Modal from "@/components/modal/modal";
 import Navigation from "@/components/nav/navigation";
 import Pillars from "@/components/pillars/pillars";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+    const [dialogOpen, setDialogOpen] = useState(false)
   return (
     <>
-      <Navigation />
+      <Navigation dialogOpenHandler={setDialogOpen} />
       <main>
+        <Modal open={dialogOpen} dialogHandler={setDialogOpen} />
         <Hero />
         <svg
           className="wave-divider"

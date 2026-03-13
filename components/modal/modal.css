@@ -1,0 +1,33 @@
+dialog, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cream);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.75;
+}
+
+dialog {
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -150%);
+}
+
+input, button, select, options {
+    border: 1px solid var(--forest);
+    border-radius: 30px;
+    width: 100%;
+    padding-block: 5px;
+    padding-inline: 20px;
+}
+
+button, input[type=submit] {
+    width: fit-content;
+    background-color: var(--forest);
+    color: white;
+}
