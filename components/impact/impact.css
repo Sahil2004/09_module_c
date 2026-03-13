@@ -1,9 +1,3 @@
-@media (max-width: 900px) {
-    .pillars-section, .impact-section, .cta-section {
-        padding: 60px 24px;
-    }
-}
-
 .impact-section {
     background: var(--forest);
     padding: 80px 48px;
@@ -26,12 +20,6 @@
     text-align: center;
     color: var(--white);
     margin-bottom: 60px;
-}
-
-@media (max-width: 900px) {
-    .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 .impact-grid {
@@ -92,3 +80,16 @@
     font-size: 12px;
     line-height: 1.5;
 }
+
+@media (max-width: 900px) {
+    .pillars-section, .impact-section, .cta-section {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

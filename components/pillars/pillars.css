@@ -1,18 +1,6 @@
-@media (max-width: 900px) {
-    .pillars-section, .impact-section, .cta-section {
-        padding: 60px 24px;
-    }
-}
-
 .pillars-section {
     background: var(--cream);
     padding: 100px 48px;
-}
-
-@media (max-width: 900px) {
-    .pillars-header {
-        grid-template-columns: 1fr;
-    }
 }
 
 .pillars-header {
@@ -51,12 +39,6 @@
     color: var(--text-muted);
     font-size: 16px;
     line-height: 1.7;
-}
-
-@media (max-width: 900px) {
-    .pillars-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .pillars-grid {
@@ -183,4 +165,22 @@
 
 .btn-pillar:hover {
     background: var(--forest-light);
+}
+
+@media (max-width: 900px) {
+    .pillars-section, .impact-section, .cta-section {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .pillars-header {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
 }
